@@ -7,6 +7,14 @@
   }
 }
 
+.transition {
+  transition: opacity 0.5s linear;
+}
+
+.rotation {
+  animation: rotation 20s linear infinite;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -74,8 +82,6 @@
 .header__link {
   text-decoration: none;
   color: #2f80ed;
-  transition-property: opacity;
-  transition-duration: 0.5s;
 }
 
 .header__link:hover {
@@ -104,36 +110,42 @@
   top: 60px;
   background-color: #2f80ed;
   z-index: -3;
-  animation: rotation 20s linear infinite;
+}
+
+.description {
+  margin: 100px 0 0 0;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .techniques {
+  display: block;
+  max-width: 80%; 
   padding-top: 100px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   display: flex;
   flex-direction: column;
-  width: 80%; 
 }
 
 .cards {
+  margin: 0;
   align-self: center;
   list-style: none;
-  /* margin: 0 auto; */
   padding: 0;
-  width: 920px;
+  max-width: 920px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 920px;
   justify-content: space-between;
 }
 
 .cards__item {
+  margin: 60px 0 0;
   width: 240px;
-  
 }
 
 .cards__image {
-  margin: 60px 40px 43px;
+  margin: 0 40px 43px;
   border-radius: 50%;
   width: 160px;
   height: 160px;
@@ -154,14 +166,103 @@
   text-align: center;
 }
 
-.description {
-  margin: 100px 0 0 0;
-  padding: 0px;
+.video {
+  margin: 0 auto;
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video__iframes {
+  padding: 0;
+  margin: 50px auto -50px;
+  list-style: none;
+  display: flex;
+  width: 1050px;
+  justify-content: space-between;
+}
+
+.video__iframe {
+  width: 515px;
+  height: 316px;
+}
+
+.oakley {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding-top: 100px;
   display: flex;
   justify-content: center;
 }
 
+.khan{
+  background-color: #f2f2f2;
+  padding: 100px 0 0;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.khan__author{
+  margin: 0; 
+  line-height: 42px;
+  font-size: 30px;
+}
+
+.khan__title{
+  margin: 0 0 50px;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.khan__quote{
+  width: 790px;
+  margin: 0 0 36px;
+  line-height: 34px;
+  font-size: 24px;
+}
+
+.khan__quote-author{
+  font-weight: bold;
+  margin: 0 0 10px;
+  line-height: 1.15;
+  font-size: 24px;
+}
+
+.khan__quote-author-subline{
+  margin: 0 0 68px;
+  line-height: 1.15;
+  font-size: 24px;
+}
+
+.khan__book-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.khan__book-pic{
+  width: 608px;
+  height: 620px;
+  margin-right: 48px;
+}
+
+.khan__buy-link{
+  line-height: 42px;
+  font-size: 24px;
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.khan__buy-link:hover{
+  opacity: 0.5;
+}
+
 .two-columns {
+  margin: 0;
   display: flex;
   width: 80%;
   justify-content: space-between;
@@ -200,7 +301,9 @@
 }
 
 .digits {
-  margin: 100px auto;
+  margin: 0 auto ;
+  padding: 100px 0;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
 }
@@ -256,8 +359,8 @@
 
 .feynman {
   background-color: #f2f2f2;
-  margin: 100px 0px 0px;
-  padding-top: 100px;
+  margin:  0px;
+  padding-top: 80px;
   background-image: url("../images/feynman.png");
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -289,12 +392,10 @@
   font-size: 36px;
   text-decoration: none;
   color: #000000;
-  transition-property: opacity;
-  transition-duration: 0.5s;
 }
 
 .feynman__link:hover {
-  opacity: 0; 
+  opacity: 0.5; 
 }
 
 .kaufman {
@@ -336,6 +437,35 @@
   z-index: 0;
 }
 
+.resources{
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+}
+
+.resources__logo-zone{
+  list-style: none;
+  width: 1100px;
+  margin: 80px auto 217px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.resources__logo{
+  width: 270px;
+  max-height: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.resources__logo:hover{
+  opacity: 0.5;
+}
 
 .footer {
   background-color: #1f1f1f;
@@ -405,6 +535,10 @@
   text-decoration: none;
   line-height: 30px;
   font-size: 18px;
+}
+
+.footer__column-link:hover {
+  opacity:0.5;
 }
 
 .footer__social-icon {
