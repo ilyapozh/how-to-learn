@@ -3,6 +3,7 @@
     max-height: 38px;
     display: flex;
     justify-content: center;
+    transition: opacity 0.5s linear;
   }
   
   .resources__logo:hover{

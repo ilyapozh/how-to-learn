@@ -3,6 +3,5 @@
     margin: 50px auto -50px;
     list-style: none;
     display: flex;
-    width: 1050px;
-    justify-content: space-between;
+    width: fit-content;
   }
