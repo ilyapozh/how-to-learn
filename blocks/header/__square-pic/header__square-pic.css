@@ -1,11 +1,4 @@
-@keyframes rotation {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 .header__square-pic {
     margin: 0px;
     padding: 0px;
